@@ -1,20 +1,29 @@
-<ul class="homepage">
-  <li>
-    <h1>Latest Talks {{#link-to 'talks'}}View All{{/link-to}}</h1>
-    {{#each talks as |talk|}}
-      {{talk-item talk=talk}}
-    {{/each}}
-  </li>
-  <li>
-    <h1>Latest Tutorials {{#link-to 'tutorials'}}View All{{/link-to}}</h1>
-    {{#each tutorials as |tutorial|}}
-      {{tutorial-item tutorial=tutorial}}
-    {{/each}}
-  </li>
-  <li>
-    <h1>Latest Screencasts {{#link-to 'screencasts'}}View All{{/link-to}}</h1>
-    {{#each screencasts as |screencast|}}
-      {{screencast-item screencast=screencast}}
-    {{/each}}
-  </li>
-</ul>
+  <h2 id="latestTalks">Latest Talks</h2>
+   {{#link-to 'talks' class="btn btn-link"}}View All{{/link-to}}
+  <ul class="list-latest" aria-labelledby="latestTalks">
+    <li>
+      {{#each talks as |talk|}}
+        {{talk-item talk=talk}}
+      {{/each}}
+    </li>
+  </ul>
+
+  <h2 id="latestTutorials">Latest Tutorials</h2>
+   {{#link-to 'tutorials' class="btn btn-link"}}View All{{/link-to}}
+  <ul class="list-latest" aria-labelledby="latestTutorials">
+    <li>
+      {{#each tutorials as |tutorial|}}
+        {{tutorial-item tutorial=tutorial}}
+      {{/each}}
+    </li>
+  </ul>
+  
+  <h2 id="latestScreencasts">Latest Screencasts</h2> 
+  {{#link-to 'screencasts' class="btn btn-link"}}View All{{/link-to}}
+  <ul class="list-latest" aria-labelledby="latestScreencasts">
+    <li>
+      {{#each screencasts as |screencast|}}
+        {{screencast-item screencast=screencast}}
+      {{/each}}
+    </li>
+  </ul>

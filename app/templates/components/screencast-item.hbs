@@ -8,8 +8,8 @@
   {{else}}
     <div class="thumbnail default"></div>
   {{/if}}
-  <h5>
-    <a href="{{screencast.firstVideo}}" data-test-screencast-title-id={{screencast.id}}>{{screencast.title}}</a>
+  
+    <a class="title-latest" href="{{screencast.firstVideo}}" data-test-screencast-title-id={{screencast.id}}>{{screencast.title}}</a>
     {{#if screencast.event}}
       <span class="event-name">
         {{screencast.event.name}}
@@ -18,7 +18,7 @@
     <a target="_blank" href="{{screencast.firstVideo}}">
       <img src="/images/link-new-tab.png" style="vertical-align: bottom">
     </a>
-  </h5>
+  
   <div class="metadata">
     {{#each screencast.authors as |author|}}
       {{#if author.site}}

@@ -1,10 +1,9 @@
 {{yield}}
 <li>
-  <h5>
     {{#each tutorial.parts as |part|}}
-      <a class="tutorials__title" href="{{part.url}}" data-test-tutorial-title-id="{{tutorial.id}}">{{part.title}}</a>
+      <a class="title-latest" href="{{part.url}}" data-test-tutorial-title-id="{{tutorial.id}}">{{part.title}}</a>
     {{/each}}
-  </h5>
+  
   <div class="metadata">
     {{#each tutorial.authors as |author|}}
       {{#if author.site}}

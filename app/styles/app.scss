@@ -26,7 +26,8 @@ header {
 				letter-spacing: 1px;
 				font-size: 0.9em;
 				&.active, :hover, :focus {
-					border-top: 4px solid orange;
+					background-color: $ember-orange;
+					color: white;
 				}
 			}
 		}
@@ -49,17 +50,45 @@ main {
 			flex-flow: column nowrap;
 			margin: auto;
 			align-items:center;
-			justify-content: center;
 			align-content:center;
 			h1 {
-				margin-top: -16px;
+				margin-top: 5em;
+				margin-bottom: 1em;
+			}
+			p.intro {
+				text-align: center;
 			}
 		}
 		&#sectionCenter {
-			
+			padding-left: 15px;
+			padding-right: 15px;
+			display: flex;
+			.btn-group {
+				display: flex;
+				margin: auto;
+				align-items:center;
+				justify-content: center;
+				align-content:center;
+				flex-flow: row wrap;
+				button {
+						min-width: 100%;
+						flex: 1;
+						margin: auto;
+						min-height: 45px;
+				}
+			}
 
 		}
 		&#sectionRight {
+			h2 {
+				background-color: $gray-dark;
+				color: white;
+				font-size: 1.125em;
+				letter-spacing: 1px;
+				padding: 0.25em;
+				text-transform: uppercase;
+				width: auto;
+			}
 			
 
 		}

@@ -7,8 +7,8 @@
   {{else}}
     <div class="thumbnail default"></div>
   {{/if}}
-  <h5>
-    <a href="{{talk.firstVideo}}" data-test-talk-title-id={{talk.id}}>{{talk.title}}</a>
+  
+    <a class="title-latest" href="{{talk.firstVideo}}" data-test-talk-title-id={{talk.id}}>{{talk.title}}</a>
     {{#if talk.event}}
       <span class="event-name">
         {{talk.event.name}}
@@ -17,7 +17,7 @@
     <a target="_blank" href="{{talk.firstVideo}}">
       <img src="/images/link-new-tab.png" style="vertical-align: bottom">
     </a>
-  </h5>
+  
   <div class="metadata">
     {{#each talk.authors as |author|}}
       {{#if author.site}}

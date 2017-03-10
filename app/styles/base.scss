@@ -30,60 +30,31 @@ body{
   color:#333;
 }
 
-
 /* MAIN CONTENT */
-section{
-  & ul{
-    margin:0px;
-    padding:0px;
+section {
+  ul {
+    margin:0;
+    padding:0;
     list-style:none;
-
-    &.homepage {
-      padding-top: 40px;
-
-      & li {
-        padding-bottom: 40px;
-        margin-bottom: 0px;
-      }
-    }
-
-    & li{
-      margin-bottom:30px;
-      position:relative;
-
-      &.thumbnail_enabled{
-        padding-left:70px;
-      }
-
-      & h5{
-        color:#e45036;
-        font-size:17px;
-        margin:0px;
-
-        & span{
-          font-size:14px;
-          font-weight:normal;
-          color:#999;
-          margin-left:10px;
-
-          @media #{$mobile} {
-            margin:0px;
-            margin-top:10px;
-            display:block;
+    &.list-latest {
+      // padding-top: 40px;
+      li {
+        padding-bottom: 0.5em;
+        margin-bottom: 0; //don't use units if the measurement is 0.
+        &.thumbnail_enabled {
+          padding-left: 70px;
+          a {
+            &.title-latest {
+              color: $ember-orange;
+            }
           }
         }
       }
-
-      & a{
-        color:inherit;
-      }
-
-      & .metadata{
+      &.metadata {
         font-size:14px;
         padding-top:10px;
         color:#999;
-
-        & a{
+        & a {
           color:#2ba6cb;
           text-decoration:none;
         }
@@ -92,13 +63,13 @@ section{
   }
 
   & li {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     position: relative;
 
     & h1 {
-      font-size: 24px;
-      margin: 0px;
-      margin-bottom: 20px;
+      // font-size: 24px;
+      // margin: 0px;
+      // margin-bottom: 20px;
 
       & a {
         background: #2ba6cb;
