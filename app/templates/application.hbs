@@ -1,46 +1,60 @@
-<nav>
-  <div class="container">
-    <ul>
-      <li class="name">
-        <h1>
-          {{#link-to 'index'}}
-            <i class="foundicon-glasses"></i> Ember<span class="light">Watch</span>
-          {{/link-to}}
-        </h1>
-      </li>
-    </ul>
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       {{#link-to 'index' class="logo navbar-brand"}}
+        <i class="foundicon-glasses"></i> Ember<span class="light">Watch</span>
+      {{/link-to}}
+    </div>
 
-    <ul class="right">
-      <li>
-        <a href="http://twitter.com/emberwatch">
-          @emberwatch
-        </a>
-      </li>
-    </ul>
-  </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>{{link-to 'Talks' 'talks'}}</li>
+        <li>{{link-to 'Screencasts' 'screencasts'}}</li>
+        <li>{{link-to 'Podcasts' 'podcasts'}}</li>
+        <li>{{link-to 'Tutorials' 'tutorials'}}</li>
+        <li>{{link-to 'Books' 'books'}}</li>
+        <li>{{link-to 'Cookbook' 'recipes'}}</li>
+        <li>{{link-to 'Contribute' 'contribute'}}</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
-
-<ul class="tabs">
-  <div class="container">
-    {{link-to 'Talks' 'talks' tagName='li'}}
-    {{link-to 'Screencasts' 'screencasts' tagName='li'}}
-    {{link-to 'Podcasts' 'podcasts' tagName='li'}}
-    {{link-to 'Tutorials' 'tutorials' tagName='li'}}
-    {{link-to 'Books' 'books' tagName='li'}}
-    {{link-to 'Cookbook' 'recipes' tagName='li'}}
-    {{link-to 'Contribute' 'contribute' tagName='li'}}
+</header>
+<main class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+      <section id="sectionLeft">
+        <h1>Welcome to EmberWatch</h1>
+        <p class="intro">
+          EmberWatch is a community-run resource hub for all things Ember.js. Here you'll find keynotes, useful books, tutorials and more!
+        </p>
+      </section>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <section id="sectionCenter">
+      <ul class="nav nav-center">
+      <li><a href="" class="btn btn-link">&darr;</a></li>
+      </ul>
+      </section>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <section id="sectionRight">
+        {{outlet "content"}}
+      </section>
+    </div>
   </div>
-</ul>
+</main>
 
-<section>
-  <div class="container">
-    {{outlet}}
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>EmberWatch is a community-driven site. Anyone is welcome to contribute.</p>
-    <p>Find more about <a href="/CONTRIBUTING.html">contributing</a> to EmberWatch!</p>
-  </div>
+<footer class="container-fluid">
+  <p class="text-right">EmberWatch is a community-driven site. Anyone is welcome to contribute. Find more about <a href="/CONTRIBUTING.html">contributing</a> to EmberWatch!</p>
+ 
 </footer>

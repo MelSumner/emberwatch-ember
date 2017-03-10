@@ -21,6 +21,7 @@
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "broccoli-asset-rev": "^2.4.5",
+    "ember-a11y": "0.1.13",
     "ember-ajax": "^2.4.1",
     "ember-cli": "^2.10.0",
     "ember-cli-app-version": "^2.0.0",

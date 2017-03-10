@@ -9,6 +9,13 @@ const stackoverflowQuery = 'https://api.stackexchange.com/2.2/questions/unanswer
 
 export default Route.extend({
   titleToken: 'Contribute to Ember.js community',
+  renderTemplate() {
+    this.render('contribute', {
+      into: 'application',
+      outlet: 'content'
+    });
+  },
+
   model() {
     return $.getJSON(stackoverflowQuery);
   }

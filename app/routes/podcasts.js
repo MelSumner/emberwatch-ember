@@ -16,6 +16,13 @@ const {
 
 export default Route.extend({
   titleToken: 'Podcasts about Ember.js',
+  renderTemplate() {
+    this.render('podcasts', {
+      into: 'application',
+      outlet: 'content'
+    });
+  },
+
 
   beforeModel() {
     return this.store.findAll('podcast/feed').then((feeds) => {
